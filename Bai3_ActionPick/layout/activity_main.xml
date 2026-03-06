@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout Bài 3 - Chọn ảnh từ thư viện
+    - Button để mở thư viện ảnh
+    - ImageView hiển thị ảnh đã chọn (scaleType="centerCrop" để ảnh vừa khung)
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn Ảnh Từ Thư Viện"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnPickImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn ảnh"
+        android:layout_marginBottom="24dp" />
+
+    <!-- ImageView hiển thị ảnh đã chọn -->
+    <!-- scaleType="centerCrop": cắt ảnh cho vừa khung, giữ tỉ lệ -->
+    <!-- adjustViewBounds="true": tự điều chỉnh kích thước theo ảnh -->
+    <ImageView
+        android:id="@+id/imgSelected"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:background="#E0E0E0"
+        android:contentDescription="Ảnh đã chọn" />
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout Bài 5 - Gửi Email
+    - 3 ô nhập: email người nhận, tiêu đề, nội dung
+    - Button đính kèm file và gửi email
+    - TextView hiển thị tên file đính kèm
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gửi Email"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Email người nhận -->
+        <EditText
+            android:id="@+id/edtTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email người nhận"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Tiêu đề email -->
+        <EditText
+            android:id="@+id/edtSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tiêu đề"
+            android:inputType="text"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Nội dung email (nhiều dòng) -->
+        <EditText
+            android:id="@+id/edtBody"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Nội dung email"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nút đính kèm file -->
+        <Button
+            android:id="@+id/btnAttach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đính kèm tệp tin"
+            android:backgroundTint="#FF9800" />
+
+        <!-- Hiển thị file đã đính kèm -->
+        <TextView
+            android:id="@+id/tvAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chưa có file đính kèm"
+            android:textColor="#757575"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Nút gửi email -->
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gửi Email"
+            android:backgroundTint="#4CAF50" />
+
+    </LinearLayout>
+</ScrollView>

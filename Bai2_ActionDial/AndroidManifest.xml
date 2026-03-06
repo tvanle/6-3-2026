@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml - Bài 2
+    - Chỉ cần 1 Activity
+    - KHÔNG cần permission vì dùng ACTION_DIAL (chỉ mở trình quay số, không tự gọi)
+    - Nếu dùng ACTION_CALL thì MỚI cần: <uses-permission android:name="android.permission.CALL_PHONE"/>
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bai2_actiondial">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Bai2 - Phone Dialer"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
