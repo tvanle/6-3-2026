@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml - Bai 6: INTENT FILTER
+
+    Activity co 2 intent-filter:
+    1. LAUNCHER: de app mo tu man hinh chinh
+    2. SEND: de app nhan du lieu chia se tu app khac
+       - action.SEND: xu ly hanh dong gui/chia se
+       - category.DEFAULT: BAT BUOC cho implicit intent
+       - data mimeType="text/plain": chi nhan du lieu dang text
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Bai6 - Email (Intent Filter)"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity android:name=".MainActivity"
+            android:exported="true">
+
+            <!-- Intent filter 1: Mo tu Launcher -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Intent filter 2: Nhan du lieu chia se dang text -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+        </activity>
+    </application>
+</manifest>
