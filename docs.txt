@@ -1,0 +1,33 @@
+Bài tập về startActivityForResult
+Bài 1: Tạo 3 Activity: Login, Register và Main. Dùng startActivityForResult làm như bài trong slide
+Các bài tập về implicit intent 
+Bài 2:
+Tạo một ứng dụng Android có giao diện nhập số điện thoại. Khi nhấn icon "Gọi điện", sử dụng Intent không tường minh để mở trình quay số của hệ thống với số điện thoại đã nhập (Intent.ACTION_DIAL)
+Bài 3:
+Tạo một ứng dụng Android cho phép người dùng chọn một hình ảnh từ thư viện và hiển thị nó.
+Sử dụng Intent không tường minh (Intent.ACTION_PICK) để chọn hình ảnh từ bộ sưu tập.
+Hiển thị hình ảnh đã chọn trong ImageView.
+Bài 4:
+Chụp ảnh bằng Camera và hiển thị ảnh vừa chụp (Intent.ACTION_IMAGE_CAPTURE).
+Bài 5:
+Tạo một ứng dụng Android có giao diện nhập thông tin:
+Địa chỉ email người nhận, Tiêu đề email, Nội dung email
+Khi nhấn nút "Gửi Email", sử dụng Intent không tường minh để mở ứng dụng email mặc định (Intent.ACTION_SEND).
+Thêm tính năng đính kèm tệp tin vào email (Intent.EXTRA_STREAM).
+Bài tập về INTENT FILTER
+Bài 6:
+Với bài 5 nhưng khi mở ứng dụng, người dùng chọn gửi email từ loại nào? Gợi ý khai báo intent-filter trong AndroidManifest.xml.
+<activity android:name=".MainActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.SEND"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:mimeType="text/plain"/>
+    </intent-filter>
+</activity>
+
+Bài tập về Background Service
+Bài 7: Viết ứng dụng đơn giản như sau
+MainActivity.java có 2 nút Start và Stop.
+MyService.java là Service chạy nền, hiển thị thông báo (Toast) mỗi 5 giây.
+Service được khai báo trong file AndroidManifest.xml
+
